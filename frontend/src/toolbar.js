@@ -1,20 +1,16 @@
 import { DraggableNode } from "./draggableNode";
-import { FiCpu, FiType, FiHash, FiFilter, FiCode } from "react-icons/fi";
-import { MdInput, MdOutlineOutput, MdOutlineTransform } from "react-icons/md";
-import { ImCalculator } from "react-icons/im";
-import { VscDebugPause } from "react-icons/vsc";
 
 const COMPONENTS = [
-  { type: "customInput", label: "Input", icon: MdInput },
-  { type: "llm", label: "LLM", icon: FiCpu },
-  { type: "customOutput", label: "Output", icon: MdOutlineOutput },
-  { type: "text", label: "Text", icon: FiType },
-  { type: "calculator", label: "Calculator", icon: ImCalculator },
-  { type: "filter", label: "Filter", icon: FiFilter },
-  { type: "transformer", label: "Transformer", icon: MdOutlineTransform },
-  { type: "conditional", label: "Conditional", icon: VscDebugPause },
-  { type: "jsonParse", label: "Json Parser", icon: FiCode },
-  { type: "counter", label: "Counter", icon: FiHash },
+  { type: "customInput", label: "Input" },
+  { type: "llm", label: "LLM" },
+  { type: "customOutput", label: "Output" },
+  { type: "text", label: "Text" },
+  { type: "calculator", label: "Calculator" },
+  { type: "filter", label: "Filter" },
+  { type: "transformer", label: "Transformer" },
+  { type: "conditional", label: "Conditional" },
+  { type: "jsonParse", label: "Json Parser" },
+  { type: "counter", label: "Counter" },
 ];
 
 export const PipelineToolbar = () => {
@@ -26,12 +22,7 @@ export const PipelineToolbar = () => {
         </div>
         <div className="flex items-center space-x-3">
           {COMPONENTS.map(({ type, label, icon: Icon }) => (
-            <DraggableNode
-              key={type}
-              type={type}
-              label={label}
-              icon={<Icon className="w-5 h-5 mb-1" />}
-            />
+            <DraggableNode key={type} type={type} label={label} />
           ))}
         </div>
       </div>

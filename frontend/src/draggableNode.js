@@ -4,7 +4,7 @@ export const DraggableNode = ({ type, label, icon }) => {
     event.target.style.cursor = "grabbing";
     event.dataTransfer.setData(
       "application/reactflow",
-      JSON.stringify(appData)
+      JSON.stringify(appData),
     );
     event.dataTransfer.effectAllowed = "move";
   };
@@ -18,13 +18,7 @@ export const DraggableNode = ({ type, label, icon }) => {
         draggable
       >
         <div className="text-blue-400 group-hover:text-blue-300 transition-colors">
-          {icon}
-        </div>
-
-        <div className="hidden group-hover:block absolute right-full top-1/2 -translate-y-1/2 mr-2 pointer-events-none z-[100]">
-          <div className="bg-gray-600 text-white text-xs px-3 py-1.5 rounded-md shadow-xl whitespace-nowrap border border-gray-700/50 backdrop-blur-sm">
-            {label}
-          </div>
+          {label}
         </div>
       </div>
     </div>

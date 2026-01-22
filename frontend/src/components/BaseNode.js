@@ -71,7 +71,7 @@ export const BaseNode = ({ id, data, config }) => {
             ...defaultHandleStyle,
             ...input.style,
           }}
-        />
+        />,
       );
     });
 
@@ -88,7 +88,7 @@ export const BaseNode = ({ id, data, config }) => {
             ...defaultHandleStyle,
             ...output.style,
           }}
-        />
+        />,
       );
     });
 
@@ -226,7 +226,7 @@ export const EnhancedTextNode = ({ id, data, config }) => {
         }
       }
     },
-    [data, extractVariables, id, updateNodeInternals, dynamicInputs]
+    [data, extractVariables, id, updateNodeInternals, dynamicInputs],
   );
 
   const handleResize = useCallback(
@@ -257,7 +257,7 @@ export const EnhancedTextNode = ({ id, data, config }) => {
         });
       });
     },
-    [dynamicInputs.length]
+    [dynamicInputs.length],
   );
 
   const enhancedConfig = useMemo(
@@ -326,7 +326,7 @@ export const EnhancedTextNode = ({ id, data, config }) => {
         return null;
       },
     }),
-    [config, nodeSize, dynamicInputs, handleTextChange, handleResize]
+    [config, nodeSize, dynamicInputs, handleTextChange, handleResize],
   );
 
   return <BaseNode id={id} data={data} config={enhancedConfig} />;

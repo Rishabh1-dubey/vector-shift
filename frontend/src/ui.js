@@ -77,7 +77,7 @@ export const PipelineUI = () => {
 
       try {
         const appData = JSON.parse(
-          event.dataTransfer.getData("application/reactflow")
+          event.dataTransfer.getData("application/reactflow"),
         );
         const type = appData?.nodeType;
 
@@ -104,7 +104,7 @@ export const PipelineUI = () => {
         console.error("Error adding node:", error);
       }
     },
-    [reactFlowInstance, getNodeID, addNode, getInitNodeData]
+    [reactFlowInstance, getNodeID, addNode, getInitNodeData],
   );
 
   const onDragOver = useCallback((event) => {
