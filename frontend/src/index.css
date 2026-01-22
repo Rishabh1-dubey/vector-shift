@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(3 7 18);
+  color: white;
+}
+
+/* ReactFlow customization */
+.react-flow__node {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.react-flow__handle {
+  background-color: #3b82f6;
+  border: 2px solid white;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+  stroke: #9ca3af;
+}
+
+.react-flow__controls {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.react-flow__controls-button {
+  border-color: #e5e7eb;
+}
+
+.react-flow__controls-button:hover {
+  background-color: #f3f4f6;
+}
+
+.react-flow__minimap {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Hide scrollbar utilities */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* ReactFlow edge and connection styles */
+.react-flow__edge-path {
+  stroke-width: 2;
+  stroke: rgb(107 114 128);
+}
+
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: rgb(96 165 250);
+}
+
+.react-flow__handle {
+  width: 12px !important;
+  height: 12px !important;
+  border: 3px solid rgb(31 41 55) !important;
+  background-color: rgb(96 165 250) !important;
+  transition: all 0.2s ease;
+}
+
+.react-flow__connection-path {
+  stroke: rgb(96 165 250);
+  stroke-width: 2;
+}
+
+/* Label styles */
+.react-flow__node label {
+  color: rgb(209 213 219);
+  font-size: 12px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Select styles */
+.react-flow__node select option {
+  background-color: rgb(31 41 55);
+  color: white;
+}
+
+
