@@ -95,7 +95,6 @@ const nodeConfigs = {
 const extraNodesConfigs = {
   calculator: {
     title: "Calculator",
-    icon: "🧮",
     width: 220,
     borderRadius: "8px",
     fields: [
@@ -117,7 +116,6 @@ const extraNodesConfigs = {
   },
   filter: {
     title: "Filter",
-    icon: "🔍",
     borderRadius: "8px",
     fields: [
       {
@@ -150,7 +148,6 @@ const extraNodesConfigs = {
   },
   transformer: {
     title: "Data Transformer",
-    icon: "🔄",
     width: 260,
     borderRadius: "8px",
     fields: [
@@ -187,7 +184,6 @@ const extraNodesConfigs = {
   },
   conditional: {
     title: "Conditional",
-    icon: "🔀",
     width: 280,
     borderRadius: "8px",
     fields: [
@@ -222,7 +218,6 @@ const extraNodesConfigs = {
   },
   jsonParser: {
     title: "JSON Parser",
-    icon: "📋",
     width: 250,
     borderRadius: "8px",
     fields: [
@@ -255,7 +250,7 @@ const extraNodesConfigs = {
   },
   counter: {
     title: "Counter",
-    icon: "🔢",
+
     width: 220,
     borderRadius: "8px",
     fields: [
